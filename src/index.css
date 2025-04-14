@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+
+:root {
+    --dark-500:#434343;
+    --dark-300:#757575;
+    --dark-900:#000000;
+    --white: #EFEDF2;
+}
+#root {
+    padding:0;
+}
+
+body {
+    font-family: "Roboto Thin", sans-serif;
+    height: 100dvh;
+    background: linear-gradient(var(--dark-500),var(--dark-900)) no-repeat;
+}
+
+label, span {
+    color: var(--white);
+}

@@ -1,0 +1,4 @@
+.item {
+    box-shadow: 0 -2px 4px 1px var(--white),
+    0 2px 4px 0 var(--white);
+}

@@ -1,33 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Grid} from "./components/Grid/Grid.tsx";
+import {Item} from "./components/Item/Item.tsx";
+import {useState} from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [mode, setMode] = useState<'GRID'|'CAROUSEL'>("GRID");
+
+    const switchMode = (value: 'GRID'|'CAROUSEL') => {
+        setMode(value);
+    }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <nav className={'w-full h-16 p-8 text-white top mb-12 shadow flex gap-8 justify-start items-center'}>
+            <button type={'button'} onClick={() => switchMode('GRID')}>Grid</button>
+            <button type={'button'} onClick={() => switchMode('CAROUSEL')}>Carousel</button>
+        </nav>
+        <div className={'px-8 w-full'}>
+            {mode === "GRID" ? (
+                <Grid className={'mx-auto'}>
+                <Item price={{currentPrice: '13.99$'}}/>
+                <Item price={{currentPrice: '13.99$'}}/>
+                <Item price={{currentPrice: '9.99$'}}/>
+                <Item price={{currentPrice: '3.99$', sold:true, oldPrice: '13.99$', percentage: '30'}}/>
+                <Item price={{currentPrice: '0.99$'}}/>
+            </Grid>
+        ) :
+        <span>Carousel</span>
+        }
+        </div>
     </>
   )
 }
