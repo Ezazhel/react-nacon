@@ -1,53 +1,63 @@
-import {Children, FC, useRef} from "react";
+import {Children, FC, useEffect, useState} from "react";
 import {CarouselProps} from "./CarouselProps.ts";
 import './Carousel.css'
 
 export const Carousel: FC<CarouselProps> = ({className, children}) => {
-	const scrollRef = useRef<HTMLDivElement>(null);
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const total = children.length;
 
-	const scroll = (direction: "left" | "right") => {
-		if (scrollRef.current) {
-			const scrollAmount =
-				direction === "left"
-					? -scrollRef.current.offsetWidth
-					: scrollRef.current.offsetWidth;
-			scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-		}
-	};
+	// L'utilisation du modulo, permet de ne pas avoir à créer de if pour revenir au premier ou au dernier item
+
+	const next = () => setCurrentIndex((prev) => (prev + 1) % total);
+	const previous = () => setCurrentIndex((prev) => (prev - 1 + total) % total);
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			next();
+		}, 3000);
+
+		return () => clearInterval(timer);
+	}, [currentIndex, total]);
 
 	return (
-		<div className={`relative flex flex-row gap-4 max-w-[1168px] ${className} mx-auto`}>
+		<div className={`relative flex flex-col gap-4 ${className} mx-auto overflow-hidden max-w-[1124px]`}>
+			<div className={'relative'}>
+
 			<button
 				type={'button'}
-				onClick={() => scroll("left")}
+				onClick={previous}
 				title='Chevron Left'
-				className="chevron linear-blue self-center"
+				className="chevron linear-blue top-1/2 left-0"
 			>
-				&#8249;
+				&#10094;
 			</button>
-
-			<div
-				ref={scrollRef}
-				className="flex overflow-x-auto no-scrollbar scroll-smooth"
-			>
 				{Children.map(children, (child, index) => (
-					<div
-						style={{ minWidth: '1054px' }}
-						key={index}
-					>
+					<div key={index}
+					className={`fade ${currentIndex === index ? 'block': 'hidden'}`}>
 						{child}
 					</div>
 				))}
-			</div>
 
 			<button
 				type={'button'}
 				title='Chevron Right'
-				onClick={() => scroll("right")}
-				className="chevron linear-blue self-center"
+				onClick={next}
+				className="chevron linear-blue top-1/2 right-0"
 			>
-				&#8250;
+				&#10095;
 			</button>
+			</div>
+			<div className="flex gap-2 self-center">
+				{children.map((_, index) => (
+					<button
+						key={index}
+						onClick={() => setCurrentIndex(index)}
+						className={`w-3 h-3 rounded-full ${
+							index === currentIndex ? "bg-black" : "bg-gray-300"
+						}`}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }

@@ -1,6 +1,19 @@
 .chevron {
     min-height: 64px;
     min-width: 42px;
+    margin-top: calc(42px/2 * -1);
     color: var(--white);
-    font-size: 48px;
+    position: absolute;
+    z-index: 10;
 }
+
+.fade {
+    animation-name: fade;
+    animation-delay: 1500ms;
+}
+
+@keyframes fade {
+ from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+

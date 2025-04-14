@@ -3,4 +3,5 @@ export type ItemProp = {
 	imgSrc?:string,
 	name: string
 	tags?: string
+	customStyle?: 'small'|'large';
 }

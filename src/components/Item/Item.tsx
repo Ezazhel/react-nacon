@@ -3,10 +3,9 @@ import {PriceTag} from "../PriceTag/PriceTag.tsx";
 import {ItemProp} from "./type.ts";
 import './Item.css';
 
-export const Item: FC<ItemProp> = ({price,name}) => {
-	return <div className='relative bg-white item border w-[256px] h-[256px] grid grid-rows-[67%_33%] justify-start rounded overflow-hidden
-	hover:-translate-y-1'>
-		<div className='p-2'>
+export const Item: FC<ItemProp> = ({price,name, customStyle = 'small'}) => {
+	return <div className={`item--container ${customStyle}`}>
+		<div>
 			<img alt='display of the mtx'
 				 src='https://placehold.co/600x400'/>
 		</div>

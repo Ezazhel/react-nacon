@@ -16,6 +16,6 @@ export const CarouselDisplay = () => {
 	}, [])
 
 	return <Carousel>
-		{items.map(item => <ItemComponent {...item} />)}
+		{items.map(item => <ItemComponent customStyle={'large'} {...item} />)}
 	</Carousel>
 }

@@ -24,8 +24,8 @@ export const PaginatedGrid = <T,>({renderElement, data}:PaginatedGridProp<T>) =>
 		</Grid>
 
 			<div className="text-white flex flex-row gap-2">
-				{displayPages.map((pageNumber: number) =>
-					<button className={`p-4 hover:underline ${currentPage === pageNumber ? 'underline text-xl' : ''}`} onClick={() => setCurrentPage(pageNumber)} disabled={currentPage === pageNumber}>
+				{displayPages.map((pageNumber: number, index:number) =>
+					<button key={index} className={`p-4 hover:underline ${currentPage === pageNumber ? 'underline text-xl' : ''}`} onClick={() => setCurrentPage(pageNumber)} disabled={currentPage === pageNumber}>
 						{pageNumber}
 					</button>
 			)}
