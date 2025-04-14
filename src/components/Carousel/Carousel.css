@@ -1,0 +1,6 @@
+.chevron {
+    min-height: 64px;
+    min-width: 42px;
+    color: var(--white);
+    font-size: 48px;
+}

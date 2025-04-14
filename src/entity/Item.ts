@@ -3,6 +3,6 @@ import {Price} from "./Price.ts";
 export interface Item {
 	price: Price,
 	imgSrc?:string,
-	title: string
+	name: string
 	tags?: string
 }

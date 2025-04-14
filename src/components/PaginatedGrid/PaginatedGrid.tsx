@@ -19,8 +19,8 @@ export const PaginatedGrid = <T,>({renderElement, data}:PaginatedGridProp<T>) =>
 	return (
 		<>
 		<div className="mx-auto flex flex-col gap-4 items-center">
-		<Grid >
-			{currentItems.map(item => renderElement(item))}
+		<Grid>
+			{currentItems.map((item,index) => renderElement(item,index))}
 		</Grid>
 
 			<div className="text-white flex flex-row gap-2">
