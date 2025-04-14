@@ -20,7 +20,7 @@ export const Carousel: FC<CarouselProps> = ({className, children}) => {
 	}, [currentIndex, total]);
 
 	return (
-		<div className={`relative flex flex-col gap-4 ${className} mx-auto overflow-hidden max-w-[1124px]`}>
+		<div className={`relative flex flex-col gap-4 ${className} mx-auto overflow-hidden md:max-w-[1124px]`}>
 			<div className={'relative'}>
 
 			<button
@@ -33,7 +33,7 @@ export const Carousel: FC<CarouselProps> = ({className, children}) => {
 			</button>
 				{Children.map(children, (child, index) => (
 					<div key={index}
-					className={`fade ${currentIndex === index ? 'block': 'hidden'}`}>
+					className={`fade ${currentIndex === index ? 'block max-w-[calc(100%-90px)] mx-auto': 'hidden'}`}>
 						{child}
 					</div>
 				))}
