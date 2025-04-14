@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Vintage Leather Wallet",
+    "price": {
+      "currentPrice": 35.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Classic Sunglasses",
+    "price": {
+      "currentPrice": 90.00,
+      "onSale": true,
+      "oldPrice": 120.00,
+      "discountPercent": 25
+    }
+  },
+  {
+    "name": "Canvas Backpack",
+    "price": {
+      "currentPrice": 50.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Wireless Headphones",
+    "price": {
+      "currentPrice": 75.00,
+      "onSale": true,
+      "oldPrice": 100.00,
+      "discountPercent": 25
+    }
+  },
+  {
+    "name": "Minimalist Watch",
+    "price": {
+      "currentPrice": 120.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Denim Jacket",
+    "price": {
+      "currentPrice": 64.00,
+      "onSale": true,
+      "oldPrice": 80.00,
+      "discountPercent": 20
+    }
+  },
+  {
+    "name": "Running Shoes",
+    "price": {
+      "currentPrice": 70.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Wool Scarf",
+    "price": {
+      "currentPrice": 22.50,
+      "onSale": true,
+      "oldPrice": 30.00,
+      "discountPercent": 25
+    }
+  },
+  {
+    "name": "Leather Belt",
+    "price": {
+      "currentPrice": 40.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": {
+      "currentPrice": 68.00,
+      "onSale": true,
+      "oldPrice": 85.00,
+      "discountPercent": 20
+    }
+  },
+  {
+    "name": "Graphic T-shirt",
+    "price": {
+      "currentPrice": 18.00,
+      "onSale": true,
+      "oldPrice": 24.00,
+      "discountPercent": 25
+    }
+  },
+  {
+    "name": "Slim Fit Chinos",
+    "price": {
+      "currentPrice": 55.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Travel Mug",
+    "price": {
+      "currentPrice": 15.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Fitness Tracker",
+    "price": {
+      "currentPrice": 95.00,
+      "onSale": true,
+      "oldPrice": 130.00,
+      "discountPercent": 27
+    }
+  },
+  {
+    "name": "Cotton Shirt",
+    "price": {
+      "currentPrice": 30.00,
+      "onSale": true,
+      "oldPrice": 40.00,
+      "discountPercent": 25
+    }
+  },
+  {
+    "name": "Laptop Sleeve",
+    "price": {
+      "currentPrice": 28.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Winter Gloves",
+    "price": {
+      "currentPrice": 36.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Desk Lamp",
+    "price": {
+      "currentPrice": 42.00,
+      "onSale": true,
+      "oldPrice": 60.00,
+      "discountPercent": 30
+    }
+  },
+  {
+    "name": "Reusable Water Bottle",
+    "price": {
+      "currentPrice": 20.00,
+      "onSale": false
+    }
+  },
+  {
+    "name": "Foldable Umbrella",
+    "price": {
+      "currentPrice": 12.00,
+      "onSale": true,
+      "oldPrice": 16.00,
+      "discountPercent": 25
+    }
+  }
+]

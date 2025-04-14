@@ -1,6 +1,7 @@
 export type PriceTagProps = {
 	currentPrice: string;
 	oldPrice?:string;
-	sold?: boolean;
-	percentage?:string;
+	onSale?: boolean;
+	discountPercent?:string;
+	className?:string;
 }
