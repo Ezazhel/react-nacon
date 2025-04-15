@@ -19,7 +19,7 @@ button {
 
 body {
     font-family: "Roboto Thin", sans-serif;
-    height: 100%;
+    height: 100dvh;
     background: linear-gradient(var(--dark-500),var(--dark-900)) no-repeat;
 }
 
