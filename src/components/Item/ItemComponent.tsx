@@ -1,9 +1,9 @@
 import {FC} from "react";
 import {PriceTag} from "../PriceTag/PriceTag.tsx";
 import {ItemProp} from "./type.ts";
-import './Item.css';
+import './ItemComponent.css';
 
-export const Item: FC<ItemProp> = ({price,name, customStyle = 'small'}) => {
+export const ItemComponent: FC<ItemProp> = ({price,name, customStyle = 'small'}) => {
 	return <div className={`item--container ${customStyle}`}>
 		<div>
 			<img alt='display of the mtx'

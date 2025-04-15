@@ -1,5 +1,7 @@
+import {Price} from "../../entity/Price.ts";
+
 export type ItemProp = {
-	price: { currentPrice: string, sold?: boolean, oldPrice?: string, percentage?:string},
+	price: Price,
 	imgSrc?:string,
 	name: string
 	tags?: string

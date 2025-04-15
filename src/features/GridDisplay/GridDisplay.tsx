@@ -1,5 +1,5 @@
 import {PaginatedGrid} from "../../components/PaginatedGrid/PaginatedGrid.tsx";
-import {Item as ItemComponent} from "../../components/Item/Item.tsx";
+import {ItemComponent as ItemComponent} from "../../components/Item/ItemComponent.tsx";
 import {useEffect, useState} from "react";
 import {Item} from "../../entity/Item.ts";
 import {ItemService} from "../../services/item-service.ts";
