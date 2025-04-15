@@ -20,7 +20,7 @@ describe('Grid', () => {
         expect(screen.getByText('-10%')).toBeInTheDocument();
     })
 
-    it('should render when there is not item', () => {
+    it('should render when there is no items', () => {
         render(<Grid></Grid>)
         expect(screen.queryByTestId('grid-container')).toBeInTheDocument();
     })

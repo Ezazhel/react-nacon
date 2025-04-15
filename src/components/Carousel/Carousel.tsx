@@ -1,6 +1,7 @@
 import {Children, FC, useEffect, useState} from "react";
 import {CarouselProps} from "./CarouselProps.ts";
 import './Carousel.css'
+import {EmptyComponent} from "../EmptyComponent/EmptyComponent.tsx";
 
 export const Carousel: FC<CarouselProps> = ({className, children,autoplay = true, autoPlayInterval = 3000}) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,10 +22,11 @@ export const Carousel: FC<CarouselProps> = ({className, children,autoplay = true
 		return () => clearInterval(timer);
 	}, [currentIndex, total]);
 
+
+	if(!_children.length) return <EmptyComponent />
 	return (
 		<div className={`relative flex flex-col gap-4 ${className} mx-auto overflow-hidden md:max-w-[1124px]`}>
-			<div className={'relative'}>
-
+			<div className={'relative min-h-[252px]'}>
 			<button
 				type={'button'}
 				data-testid={'previous-btn'}

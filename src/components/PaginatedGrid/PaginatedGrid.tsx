@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {PaginatedGridProp} from "./PaginatedGridProp.ts";
 import {Grid} from "../Grid/Grid.tsx";
+import {EmptyComponent} from "../EmptyComponent/EmptyComponent.tsx";
 
 export const PaginatedGrid = <T,>({renderElement, data}:PaginatedGridProp<T>) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
@@ -16,6 +17,7 @@ export const PaginatedGrid = <T,>({renderElement, data}:PaginatedGridProp<T>) =>
 	const totalPages = Math.ceil(data.length / itemsPerPage);
 	const displayPages = Array.from({length: totalPages}, (_,index) => index+1);
 
+	if(!currentItems.length) return <EmptyComponent />
 	return (
 		<>
 		<div className="mx-auto flex flex-col gap-4 items-center">
